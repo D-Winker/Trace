@@ -1,0 +1,3 @@
+-Removed on screen debug text
+-Corrected errors with sizing of Y and Z 'Time' measurement arraylists
+ -Corrected direction of the Z 'Time' measurements (i.e. it now moves into the screen)
