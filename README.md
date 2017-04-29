@@ -1,5 +1,5 @@
 # Trace
-A multi-dimensional, real time data plotter, for real world data.
+A multi-dimensional, real time data plotter and logger, for real world data.
 
 Use: Connect some source of CSV serial data to your computer (ex. Arduino, STM Nucleo, MSP430, etc.)
 Run Trace.
