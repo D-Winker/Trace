@@ -1,0 +1,50 @@
+-Removed on screen debug text
+-Corrected errors with sizing of Y and Z 'Time' measurement arraylists
+	-Corrected direction of the Z 'Time' measurements (i.e. it now moves into the screen)
+-Added camera. Camera can zoom and rotate around the origin.
+-I don't think RGB can be used for color in this way, so I'm removing it
+-Added logging option (logs the data in a trace to csv)
+-Panning with camera (right mouse drag)
+-Added HUD to trace display window
+	-button to return to addtrace page
+	-hide HUD (hides everything except for the hide button)
+	-change background color
+	-Change trace 'speed' (a factor for the 'time' measurement)
+-Added axes (x, y, z lines and numbered labels)
+-Flipped y-axis plotting. In 3D space increasing y goes down, so now it's made negative before drawing (so increasing y goes up) 
+-Modify the way that traces are drawn and the way use of the 'time' measurement is noted, allowing for multiple 'time' axes to be used in a single trace
+-Format measurement readings (limit displayed digits)
+-Added the ability to delete traces (currently all at once; a scrollable dropdown could be added)
+-Removed 'QUIT' button; pressing the X in the corner of the frame is now sufficient to trigger all necessary closing actions
+-Changed name of file to Trace
+-Issue fixed: Background color and camera position are now preserved when going back and forth between setup display and trace display
+-Issue Fixed: Dragging on the color wheel or speed slider no longer drags the background
+	-Edit: This is un-fixed to some extent
+-The SETUP_DISPLAY is now drawn on the HUD; i.e. the camera is always active. It's easier this way.
+-Allows window resizing (without breaking)
+-Can delete traces (logs are closed out upon deletion)
+-Connection can be established after startup (COM port selection, Baud rate, and normalization parameter)
+	-Scrollable lists for COM connection are no longer overlapped by other elements
+	-Connection can be broken to release the connected device and port
+	-No longer attempts a connection on startup
+-Added the ability to change limits of X, Y, and Z axes
+
+Need to
+-Have a dedicated fullscreen option, have screen resizing as a toggle-able option (to, hopefully, get rid of the camera issues)
+	-Or, figure out/fix the camera issue
+	-Or, write a new camera
+-Add trace math, including smoothing
+-Edit trace properties manually (color, length - on HUD)
+-Remove unused dimension checkbox, or add RGB back in
+-HUD
+	-button/box to toggle axes on/off
+-Add audio data selection to menus (not COM menu; checkbox dropdowns? Left and right channels separately)
+-Increase camera render distance
+
+-Optional indicator where camera is looking
+-Option to give the camera a new lookat point
+-Change default trace color as traces are added
+-Add FFT
+-Make text larger (is this possible with controlp5?)
+-Option of displaying measurements on screen
+-Allow Trace to send things over serial (in addition to receiving them)

@@ -1,0 +1,14 @@
+This document contains explanations of key terms.
+At the bottom of each explanation is a TL;DR (too long, didn't read) that is intended to give you just enough information to use Trace.
+Last updated: 4/6/2017
+
+
+Normalization Parameter
+ - An ADC reports a value between 0 and the number of bits it has (i.e. for a 4 bit ADC, a value between 0 and 15 (1111), for a 10 bit ADC, between 0 and 1023)
+ - Trace expects that values passed to it are derived from ADC readings, and that regardless of any processing done to them, they still range from 0 to some maximum value
+ - Trace normalizes all incoming measurements so they can be easily used for any dimension. For example, colors (Red, Green, Blue) are stored in 8-bits, so the maximum value for a color is 255. On the other hand, X, Y, and Z have no limits. Their extents can be set arbitrarily. By normalizing a measurement, it can easily be scaled for use in either case.
+ - TL;DR: The largest value that could be sent to Trace
+
+
+
+
